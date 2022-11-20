@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Index";
 }
+@if(TempData["success"] != null) {
+    <h2>@TempData["success"]</h2>
+}
         <div class="col-6 text-start mt-10">Category-List</div>
         <div class="col-12 text-end mb-5">
     <a class="btn btn-primary" asp-area="" asp-controller="Category" asp-action="Create">Create Category</a>
